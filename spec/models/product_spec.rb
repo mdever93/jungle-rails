@@ -13,7 +13,7 @@ RSpec.describe Product, type: :model do
     end
     it "saves a product successfully when all fields are set" do
       @product.save
-      expect(@product.errors.full_messages).to be_empty
+      expect(@product).to be_valid
     end
     it "returns an error if name is blank" do
       @product.name = nil
